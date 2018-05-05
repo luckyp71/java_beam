@@ -32,8 +32,9 @@ public class readWriteLocalText {
 	
 	public static void main (String[] args) {
 		
-		// Change the path below with your local path
+		// Change the below path with your own local file's path
 		writeData(readData("/home/lucky/Data-Lucky/Beam/input.txt"),"/home/lucky/Data-Lucky/Beam/output.txt");
+		
 		result = p.run().waitUntilFinish();
 		System.out.println(result);
 		
