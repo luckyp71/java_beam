@@ -1,14 +1,14 @@
 package org.example1;
 
+import org.apache.beam.sdk.options.PipelineOptions;
+import org.apache.beam.sdk.options.PipelineOptionsFactory;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.PipelineResult.State;
 import org.apache.beam.sdk.io.TextIO;
-import org.apache.beam.sdk.options.PipelineOptions;
-import org.apache.beam.sdk.options.PipelineOptionsFactory;
 import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PDone;
 
-public class readWriteLocalText {
+public class Example1 {
 	
 	private static PipelineOptions options = PipelineOptionsFactory.create();
 	private static Pipeline p = Pipeline.create(options);
