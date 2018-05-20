@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="org.example.java_beam.AppTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="org.example.java_beam.AppTest" time="0.004" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/usr/lib/java/jdk1.8.0_171/jre/lib/amd64"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/lib/amd64"/>
     <property name="java.vm.version" value="25.171-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="maven.multiModuleProjectDirectory" value="/home/lucky/Github/java_beam"/>
@@ -18,20 +18,20 @@
     <property name="user.dir" value="/home/lucky/Github/java_beam"/>
     <property name="java.runtime.version" value="1.8.0_171-b11"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="/usr/lib/java/jdk1.8.0_171/jre/lib/endorsed"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/lib/endorsed"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/lucky/Eclipse-Projects/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf6786611837908831314.tmp"/>
+    <property name="classworlds.conf" value="/home/lucky/Eclipse-Projects/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf3039143244557793696.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="3.16.0-4-amd64"/>
+    <property name="os.version" value="4.9.0-6-amd64"/>
     <property name="user.home" value="/root"/>
     <property name="user.timezone" value="Asia/Jakarta"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
@@ -41,16 +41,16 @@
     <property name="java.class.path" value="/home/lucky/Programs/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.8.3.20180227-2135/jars/plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="/usr/lib/java/jdk1.8.0_171/jre"/>
+    <property name="java.home" value="/usr/lib/jvm/jdk8/jdk1.8.0_171/jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.version" value="1.8.0_171"/>
-    <property name="java.ext.dirs" value="/usr/lib/java/jdk1.8.0_171/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/lib/ext:/usr/java/packages/lib/ext"/>
     <property name="securerandom.source" value="file:/dev/./urandom"/>
-    <property name="sun.boot.class.path" value="/usr/lib/java/jdk1.8.0_171/jre/lib/resources.jar:/usr/lib/java/jdk1.8.0_171/jre/lib/rt.jar:/usr/lib/java/jdk1.8.0_171/jre/lib/sunrsasign.jar:/usr/lib/java/jdk1.8.0_171/jre/lib/jsse.jar:/usr/lib/java/jdk1.8.0_171/jre/lib/jce.jar:/usr/lib/java/jdk1.8.0_171/jre/lib/charsets.jar:/usr/lib/java/jdk1.8.0_171/jre/lib/jfr.jar:/usr/lib/java/jdk1.8.0_171/jre/classes"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/lib/resources.jar:/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/lib/rt.jar:/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/lib/sunrsasign.jar:/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/lib/jsse.jar:/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/lib/jce.jar:/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/lib/charsets.jar:/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/lib/jfr.jar:/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="maven.home" value="/home/lucky/Github/java_beam/EMBEDDED"/>
     <property name="file.separator" value="/"/>
@@ -60,5 +60,5 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="org.example.java_beam.AppTest" name="testApp" time="0.002"/>
+  <testcase classname="org.example.java_beam.AppTest" name="testApp" time="0.004"/>
 </testsuite>
