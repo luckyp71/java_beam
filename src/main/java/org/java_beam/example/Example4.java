@@ -28,7 +28,7 @@ public class Example4 {
 	public static void main (String[] args) {
 
 		List<String> data = Arrays.asList("This is example 4","in using Apache Beam","with Java Direct Runner.",
-				"Apache Beam is","an open source, unified for defining both",
+				"Apache Beam is","an open source", "unified for defining both",
 				"batch and streaming data-parallel processing pipelines.");
 		
 		PipelineOptions options = PipelineOptionsFactory.create();
@@ -65,6 +65,7 @@ public class Example4 {
 		}));
 		
 		// Save the output into local file
+		@SuppressWarnings("unused")
 		PDone output = wordCountString.apply(TextIO.write().to("/home/lucky/Data-Lucky/Beam/output.txt"));
 
 		// Run and wait the pipeline until finish
