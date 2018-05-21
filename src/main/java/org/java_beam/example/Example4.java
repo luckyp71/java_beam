@@ -37,7 +37,7 @@ public class Example4 {
 		// Input: Read data from variable
 		PCollection<String> input = pipeline.apply(Create.of(data).withCoder(StringUtf8Coder.of()));
 		
-		// 1st Orchestration: Splitting sentences into word
+		// 1st Orchestration: Splitting sentences into words
 		PCollection<String> splitLines = input.apply(ParDo.of(new DoFn<String, String>(){
 			private static final long serialVersionUID = 1L;
 			@ProcessElement
