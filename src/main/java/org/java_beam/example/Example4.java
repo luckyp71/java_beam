@@ -9,9 +9,9 @@ import org.apache.beam.sdk.io.TextIO;
 import org.apache.beam.sdk.transforms.Count;
 import org.apache.beam.sdk.transforms.Create;
 import org.apache.beam.sdk.transforms.ParDo;
-import org.apache.beam.sdk.transforms.SimpleFunction;
 import org.apache.beam.sdk.transforms.DoFn;
-import org.apache.beam.sdk.transforms.MapElements;
+//import org.apache.beam.sdk.transforms.MapElements;
+//import org.apache.beam.sdk.transforms.SimpleFunction;
 import org.apache.beam.sdk.values.KV;
 import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PDone;
@@ -55,14 +55,24 @@ public class Example4 {
 		PCollection<KV<String, Long>> kvTransformation = splitLines.apply(Count.<String>perElement());
 		
 		// 3rd Orchestration: Transform pairs of words and counts into String 
-		PCollection<String> wordCountString = kvTransformation.apply(MapElements.via(new SimpleFunction<KV<String, Long>, String>(){
-			private static final long serialVersionUID = 1L;
-			@Override
-			public String apply(KV<String, Long> element) {
-				System.out.println(element.getKey()+":"+element.getValue());
-				return element.getKey()+":"+element.getValue();
-			}
+		PCollection<String> wordCountString = kvTransformation.apply(
+				ParDo.of(new DoFn<KV<String, Long>,String>(){
+					private static final long serialVersionUID = 1L;
+					@ProcessElement
+					public void processElement(ProcessContext ctx) {
+						System.out.println(ctx.element().getKey()+":"+ctx.element().getValue());
+					}
 		}));
+		
+		// The PCollection below will return the same value as PCollection above
+//		PCollection<String> wordCountString = kvTransformation.apply(MapElements.via(new SimpleFunction<KV<String, Long>, String>(){
+//			private static final long serialVersionUID = 1L;
+//			@Override
+//			public String apply(KV<String, Long> element) {
+//				System.out.println(element.getKey()+":"+element.getValue());
+//				return element.getKey()+":"+element.getValue();
+//			}
+//		}));
 		
 		// Save the output into local file
 		@SuppressWarnings("unused")
