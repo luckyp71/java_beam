@@ -9,6 +9,10 @@ import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PDone;
 import java.io.IOException;
 
+/*
+ * Perform a simple data processing with Beam's pipeline
+ */
+
 public class Example1 {
 	
 	private static PipelineOptions options = PipelineOptionsFactory.create();

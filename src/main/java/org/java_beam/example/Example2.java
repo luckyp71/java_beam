@@ -13,6 +13,10 @@ import java.util.List;
 import java.util.Arrays;
 import java.io.IOException;
 
+/*
+ * Perform a simple data processing with Beam's pipeline
+ */
+
 public class Example2 {
 
 	private static PipelineOptions options = PipelineOptionsFactory.create();

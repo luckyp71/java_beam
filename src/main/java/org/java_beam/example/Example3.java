@@ -13,6 +13,10 @@ import org.apache.beam.sdk.values.PCollection;
 import java.util.List;
 import java.util.Arrays;
 
+/*
+ * Perform a simple data processing includding orchestration with Beam's pipeline
+ */
+
 public class Example3 {
 
 	public static void main (String[] args) {
