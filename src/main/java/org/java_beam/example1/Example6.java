@@ -17,7 +17,7 @@ import java.util.Arrays;
 import org.java_beam.example.model.Stock;
 
 /*
- * Read dummy data with simple POJO and inserting into MySQL using Apache Beam's JdbcIO
+ * Read dummy data with simple POJO and insert those data into MySQL using Apache Beam's JdbcIO
  */
 
 public class Example6 {
