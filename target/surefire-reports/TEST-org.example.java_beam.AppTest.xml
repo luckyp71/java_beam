@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="org.example.java_beam.AppTest" time="0.01" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="org.example.java_beam.AppTest" time="0.013" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk8/jdk1.8.0_171/jre/lib/amd64"/>
@@ -25,7 +25,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/lucky/Eclipse-Projects/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf8579268172407829951.tmp"/>
+    <property name="classworlds.conf" value="/home/lucky/Eclipse-Projects/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf396138965001247660.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,5 +60,5 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="org.example.java_beam.AppTest" name="testApp" time="0.01"/>
+  <testcase classname="org.example.java_beam.AppTest" name="testApp" time="0.013"/>
 </testsuite>

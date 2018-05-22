@@ -1,4 +1,4 @@
-package org.java_beam.example;
+package org.java_beam.example1;
 
 import org.apache.beam.sdk.options.PipelineOptions;
 import org.apache.beam.sdk.options.PipelineOptionsFactory;

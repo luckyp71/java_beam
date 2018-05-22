@@ -37,5 +37,16 @@
 			<artifactId>beam-sdks-java-core</artifactId>
 			<version>2.4.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.beam/beam-sdks-java-extensions-sql -->
+		<dependency>
+			<groupId>org.apache.beam</groupId>
+			<artifactId>beam-sdks-java-extensions-sql</artifactId>
+			<version>2.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.7</version>
+		</dependency>
 	</dependencies>
 </project>
