@@ -10,6 +10,8 @@ public class Stock implements Serializable {
 	private long price;
 	private String company;
 	
+	public Stock() {}
+	
 	public Stock(String symbol, long price, String company) {
 		this.symbol = symbol;
 		this.price = price;

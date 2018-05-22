@@ -21,6 +21,10 @@ import java.util.Date;
 
 import org.java_beam.example.model.Stock;
 
+/*
+ * Read dummy data with simple POJO using BeamSql
+ */
+
 public class Example5 {
 
 	public static void main (String[] args) {
@@ -37,18 +41,18 @@ public class Example5 {
 		PipelineOptions options = PipelineOptionsFactory.create();
 		Pipeline p = Pipeline.create(options);
 		
-		// Define the record type
-		RowType rowType = RowSqlType.builder()
+		// Define field data type
+		RowType fieldDataType = RowSqlType.builder()
 							.withVarcharField("symbol")
 							.withBigIntField("price")
 							.withVarcharField("company")
 							.build();
 		
-		// PCollection of Stock
+		// Read data from stockList and save it as PCollection of Stock
 		PCollection<Stock> stockModel = p.apply(Create.of(stockList)
 										.withCoder(SerializableCoder.of(Stock.class))); 
 		
-		// Convert PCollection of Stock to Rows with the same schema (row type) defined above
+		// Convert PCollection of Stock to PCollection of Row with the same schema (row type) defined above
 		PCollection<Row> stocks = stockModel.apply(ParDo.of(new DoFn<Stock, Row>(){
 			private static final long serialVersionUID = 1L;
 			@ProcessElement
@@ -57,7 +61,7 @@ public class Example5 {
 				Stock stock = ctx.element();
 				
 				// Create a Row with the row type and values from the current Stock
-				Row stockRow = Row.withRowType(rowType)
+				Row stockRow = Row.withRowType(fieldDataType)
 								  .addValues(stock.getSymbol(),
 										  	stock.getPrice(),
 										  	stock.getCompany()
@@ -66,7 +70,7 @@ public class Example5 {
 				// Output the Row representing the current Stock
 				ctx.output(stockRow);
 			}
-		})).setCoder(rowType.getRowCoder());
+		})).setCoder(fieldDataType.getRowCoder());
 		
 		// Get stock by its symbol query
 		PCollection<Row> getBySymbolQuery = stocks.apply(BeamSql.query("SELECT symbol, price, company"
