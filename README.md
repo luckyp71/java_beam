@@ -6,9 +6,9 @@
 <h3>Prerequisites</h3>
 <p>1. <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">JDK 1.8</a></p>
 <p>2. <a href="https://beam.apache.org">Apache Beam</a></p>
-<p>2. <a href="https://www.mysql.com">MySQL</a></p>
-<p>3. <a href="https://www.eclipse.org/downloads/packages">Eclipse</p>
-<p>4. <a href="https://maven.apache.org">Maven</a></p>
+<p>3. <a href="https://www.mysql.com">MySQL</a></p>
+<p>4. <a href="https://www.eclipse.org/downloads/packages">Eclipse</p>
+<p>5. <a href="https://maven.apache.org">Maven</a></p>
 
 
 	
