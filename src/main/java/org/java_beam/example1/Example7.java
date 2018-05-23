@@ -33,8 +33,8 @@ public class Example7 {
 				
 				// Data Source Configuration for PostgreSQL
 				.withDataSourceConfiguration(JdbcIO.DataSourceConfiguration
-						.create("org.postgresql.Driver","jdbc:postgresql://localhost:5432/practice")
-						.withUsername("postgres").withPassword("pratama"))
+						.create("org.postgresql.Driver","jdbc:postgresql://localhost:5432/your_db")
+						.withUsername("your_username").withPassword("your_password"))
 				
 				//Data Source Configuration for MySQL
 //				.withDataSourceConfiguration(JdbcIO.DataSourceConfiguration
