@@ -15,11 +15,11 @@ import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PDone;
 import org.apache.beam.sdk.values.Row;
 import org.apache.beam.sdk.values.RowType;
+import org.java_beam.model.Stock;
+
 import java.util.Collection;
 import java.util.Arrays;
 import java.util.Date;
-
-import org.java_beam.example.model.Stock;
 
 /*
  * Read dummy data with simple POJO using BeamSql

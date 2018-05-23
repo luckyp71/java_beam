@@ -1,4 +1,4 @@
-package org.java_beam.example.model;
+package org.java_beam.model;
 
 import java.io.Serializable;
 

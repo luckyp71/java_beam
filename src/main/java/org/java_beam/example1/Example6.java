@@ -9,12 +9,12 @@ import org.apache.beam.sdk.coders.SerializableCoder;
 import org.apache.beam.sdk.io.jdbc.JdbcIO;
 import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PDone;
+import org.java_beam.model.Stock;
+
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.Arrays;
-
-import org.java_beam.example.model.Stock;
 
 /*
  * Read dummy data with simple POJO and insert those data into Database (PostgreSQL or MySQL)
@@ -42,13 +42,14 @@ public class Example6 {
 									
 						// Data Source Configuration for PostgreSQL
 						.withDataSourceConfiguration(JdbcIO.DataSourceConfiguration
-								.create("org.postgresql.Driver", "jdbc:postgresql://localhost:5432/your_db")
-								.withUsername("your_username").withPassword("your_password"))
-						
-						// Data Source Configuration for MySQL
-//						.withDataSourceConfiguration(JdbcIO.DataSourceConfiguration
-//								.create("com.mysql.jdbc.Driver", "jdbc:mysql://localhost:3306/practice?useSSL=false")
-//								.withUsername("root").withPassword("pratama"))			
+								
+								// Data Source Configuration for PostgreSQL
+								.create("org.postgresql.Driver","jdbc:postgresql://localhost:5432/your_db")
+								
+								//Data Source Configuration for MySQL
+//								.create("com.mysql.jdbc.Driver","jdbc:mysql://localhost:3306/your_db?useSSL=false")	
+					
+								.withUsername("your_username").withPassword("your_password"))			
 
 						.withStatement("insert into stock values(?, ?, ?)")
 						.withPreparedStatementSetter(new JdbcIO.PreparedStatementSetter<Stock>() {

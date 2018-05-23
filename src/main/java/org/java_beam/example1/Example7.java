@@ -33,13 +33,14 @@ public class Example7 {
 				
 				// Data Source Configuration for PostgreSQL
 				.withDataSourceConfiguration(JdbcIO.DataSourceConfiguration
+						
+						// Data Source Configuration for PostgreSQL
 						.create("org.postgresql.Driver","jdbc:postgresql://localhost:5432/your_db")
+						
+						//Data Source Configuration for MySQL
+//						.create("com.mysql.jdbc.Driver","jdbc:mysql://localhost:3306/your_db?useSSL=false")		
+			
 						.withUsername("your_username").withPassword("your_password"))
-				
-				//Data Source Configuration for MySQL
-//				.withDataSourceConfiguration(JdbcIO.DataSourceConfiguration
-//						.create("com.mysql.jdbc.Driver","jdbc:mysql://localhost:3306/practice?useSSL=false")
-//						.withUsername("root").withPassword("pratama"))
 			
 				.withQuery("SELECT symbol, price, company from stock WHERE symbol = ?")
 				.withCoder(StringUtf8Coder.of())
