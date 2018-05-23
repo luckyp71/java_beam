@@ -75,7 +75,6 @@ public class Example5 {
 		// Get stock by its symbol query
 		PCollection<Row> getBySymbolQuery = stocks.apply(BeamSql.query("SELECT symbol, price, company"
 																	+" FROM PCOLLECTION WHERE symbol='NVDA'"));
-		
 		// Transform PCollection<Row> to PCollection<String>
 		PCollection<String> getBySymbolString = getBySymbolQuery.apply(ParDo.of(new DoFn<Row, String>(){
 			private static final long serialVersionUID = 1L;
